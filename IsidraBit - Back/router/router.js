@@ -79,6 +79,7 @@ class Router {
 
         this.router.post('/webhook', (req, res) => {
             try {
+              console.log("--------------> Funciono el webhook")
               const xSignatureHeader = req.get('x-signature');
               const payload = req.rawBody; // Asegúrate de que req.rawBody contenga el cuerpo de la solicitud sin procesar
           

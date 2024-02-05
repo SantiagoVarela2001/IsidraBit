@@ -31,14 +31,11 @@ this.app.use(cors({
 
 this.app.use('/isidrabit', new RouterServer(this.persistencia).start())
 
-//app.use('/LaMixtureria/Playlist', RouterServer().start)
-
 
 /* ------------------------------------------------------------- */
 /*                      Servidor LISTEN                          */
 /* ------------------------------------------------------------- */
 if(config.MODO_PERSISTENCIA == 'MONGODB') {
-    //await CnxMongoDB.conectar()
     await db.conectar()
 }
 const PORT = this.port

@@ -29,7 +29,7 @@ const CarritoModal = ({ carrito, cerrarModal, setCarrito, disminuirContador }) =
 
     const [preferenceId, setPreferenceId] = useState(null);
 
-    initMercadoPago("TEST-333b7fa6-9528-4c0c-ab63-3941f1ed3712", { locale: "es-AR" });
+    initMercadoPago("APP_USR-05492589-700a-4e8d-8f00-5f069ac92694", { locale: "es-AR" });  // "TEST-333b7fa6-9528-4c0c-ab63-3941f1ed3712"
 
     const createPreference = async () => {
         try {
