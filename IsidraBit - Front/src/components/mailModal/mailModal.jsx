@@ -30,7 +30,7 @@ const MailModal = ({ modalAbierto, setModalAbierto, setMailValidado }) => {
   };
 
   const sendVerificationEmail = async (email, code) => {
-    await axios.post('http://127.0.0.1:8080/isidrabit/enviar-correo-verificacion', { email, code });
+    await axios.post('https://7dbd-190-17-140-30.ngrok-free.app/isidrabit/enviar-correo-verificacion', { email, code });
   };
 
   const handleSubmit = () => {

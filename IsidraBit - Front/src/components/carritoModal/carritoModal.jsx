@@ -33,7 +33,7 @@ const CarritoModal = ({ carrito, cerrarModal, setCarrito, disminuirContador }) =
 
     const createPreference = async () => {
         try {
-            const response = await axios.post("http://localhost:8080/isidrabit/create_preference", {
+            const response = await axios.post("https://7dbd-190-17-140-30.ngrok-free.app/isidrabit/create_preference", {
                 title: "Beat",
                 quantity: carrito.length,
                 price: precio,

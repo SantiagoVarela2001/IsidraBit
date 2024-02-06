@@ -1,3 +1,9 @@
 [build]
   command = "npm run build"  # Ajusta esto según tu configuración
   publish = "dist"  # Ajusta esto según tu configuración de salida
+
+  [[redirects]]
+  from = "/api/*"
+  to = "https://tu-backend-url/:splat"
+  status = 200
+  force = true
