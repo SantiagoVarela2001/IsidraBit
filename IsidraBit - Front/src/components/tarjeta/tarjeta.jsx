@@ -6,7 +6,7 @@ const Tarjeta = ({ beat, incrementarContador, setCarrito, carrito, disminuirCont
 
   const [agregado, setAgregado] = useState(false);
 
-  const { _id, urlPista, nombre, genero, pathBeat, bpm } = beat;
+  const { _id, urlPista, nombre, genero, bpm } = beat;
 
   const agregarAlCarrito = () => {
     if (!carrito.find(beatEnCarrito => beatEnCarrito._id === _id)) {
@@ -30,7 +30,10 @@ const Tarjeta = ({ beat, incrementarContador, setCarrito, carrito, disminuirCont
         <h2 className='nombre-beat'>{nombre}</h2>
         <p className='genero'>{genero.toUpperCase()}</p>
         <p className='bpm'>BPM: {bpm}</p>
-        <button onClick={agregado ? quitarDelCarrito : agregarAlCarrito} className='agregar-quitar-carrito-button'>
+        <button 
+          onClick={agregado ? quitarDelCarrito : agregarAlCarrito} 
+          className={`agregar-quitar-carrito-button ${agregado ? 'agregado' : ''}`}
+        >
           {agregado ? 'Quitar del carrito' : 'Agregar al Carrito'}
         </button>
       </div>

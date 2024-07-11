@@ -4,6 +4,6 @@
 
   [[redirects]]
   from = "/IsidraBit - Back/*"
-  to = "https://7dbd-190-17-140-30.ngrok-free.app/:splat"
+  to = "http://localhost:8080/:splat"
   status = 200
   force = true

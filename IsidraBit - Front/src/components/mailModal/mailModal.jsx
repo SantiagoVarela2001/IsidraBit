@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { Modal, Button, Form, Alert } from 'react-bootstrap'; // Añadido Alert para mostrar mensaje de validación
+import { Modal, Button, Form, Alert } from 'react-bootstrap';
 import axios from "axios";
 
 const MailModal = ({ modalAbierto, setModalAbierto, setMailValidado }) => {
   const [userEnteredCode, setUserEnteredCode] = useState('');
   const [userEnteredMail, setUserEnteredMail] = useState('');
   const [codigoVerificacion, setCodigoVerificacion] = useState('');
-  const [validacionExitosa, setValidacionExitosa] = useState(false); // Nuevo estado
+  const [validacionExitosa, setValidacionExitosa] = useState(false);
+  const [envioCorreoExitoso, setEnvioCorreoExitoso] = useState(false); // Nuevo estado para indicar envío exitoso
 
   const handleClose = () => {
     setModalAbierto(false);
@@ -20,6 +21,7 @@ const MailModal = ({ modalAbierto, setModalAbierto, setMailValidado }) => {
       sendVerificationEmail(userEmail, verificationCode);
 
       setCodigoVerificacion(verificationCode);
+      setEnvioCorreoExitoso(true); // Marca el envío exitoso para aplicar el estilo verde agua
     } else {
       alert('Ingreso de correo electrónico cancelado. La compra se cancelará.');
     }
@@ -30,19 +32,17 @@ const MailModal = ({ modalAbierto, setModalAbierto, setMailValidado }) => {
   };
 
   const sendVerificationEmail = async (email, code) => {
-    await axios.post('https://7dbd-190-17-140-30.ngrok-free.app/isidrabit/enviar-correo-verificacion', { email, code });
+    await axios.post('http://localhost:8080/isidrabit/enviar-correo-verificacion', { email, code });
   };
 
   const handleSubmit = () => {
     if (userEnteredCode === codigoVerificacion) {
-      console.log('Código correcto');
       setMailValidado(true);
       setValidacionExitosa(true);
       setTimeout(() => {
         handleClose();
-      }, 2000); // Cerrar el modal automáticamente después de 2 segundos (puedes ajustar este valor)
+      }, 2000);
     } else {
-      console.log('Código incorrecto');
       alert('Código incorrecto');
     }
   };
@@ -63,14 +63,26 @@ const MailModal = ({ modalAbierto, setModalAbierto, setMailValidado }) => {
             <div className='from-group'>
               <Form.Group controlId="formBasicCode">
                 <Form.Label>Tu Email</Form.Label>
-                <Form.Control className='input-mail-modal' type="text" placeholder="Ingresa tu Email" value={userEnteredMail} onChange={(e) => setUserEnteredMail(e.target.value)} />
+                <Form.Control
+                  className={`input-mail-modal ${envioCorreoExitoso ? 'input-mail-modal-success' : ''}`}
+                  type="text"
+                  placeholder="Ingresa tu Email"
+                  value={userEnteredMail}
+                  onChange={(e) => setUserEnteredMail(e.target.value)}
+                />
               </Form.Group>
-              <Button className='mail-boton' onClick={enviarMail}>Enviar Codigo</Button>
+              <Button className='mail-boton' onClick={enviarMail}>Enviar Código</Button>
             </div>
             <div className='from-group'>
               <Form.Group controlId="formBasicCode">
                 <Form.Label>Código de Verificación</Form.Label>
-                <Form.Control className='input-mail-modal' type="text" placeholder="Ingresa el código" value={userEnteredCode} onChange={(e) => setUserEnteredCode(e.target.value)} />
+                <Form.Control
+                  className='input-mail-modal'
+                  type="text"
+                  placeholder="Ingresa el código"
+                  value={userEnteredCode}
+                  onChange={(e) => setUserEnteredCode(e.target.value)}
+                />
               </Form.Group>
               <Button className='mail-boton' onClick={handleSubmit}>Validar Email</Button>
             </div>

@@ -34,7 +34,7 @@ class Server {
             await db.conectar();
         }
         const PORT = this.port;
-        this.server = this.app.listen(PORT, () => console.log(`https://7dbd-190-17-140-30.ngrok-free.app`));
+        this.server = this.app.listen(PORT, () => console.log(`Servidor express escuchando en el puerto http://localhost:${PORT}`));
         this.server.on('error', error => console.log('Servidor express en error:', error));
 
         return this.app;

@@ -177,7 +177,7 @@ body {
   /* Mantiene los bordes redondeados */
 }
 
-.agregar-quitar-carrito-button {
+agregar-quitar-carrito-button {
   display: inline-block;
   width: 170px;
   /* Ancho fijo para ambos botones, ajusta según sea necesario */
@@ -190,6 +190,11 @@ body {
   transition: background-color 0.3s ease;
   /* Efecto de transición al pasar el ratón */
   font-family: 'Kanit', sans-serif;
+}
+
+.agregar-quitar-carrito-button.agregado {
+  background-color: #f44336; /* Color cuando está agregado */
+  color: white;
 }
 
 /* Estilos generales para el modal de correo electrónico */
@@ -266,20 +271,27 @@ body {
 }
 
 .beatCarrito {
-  display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
-  /* Añade margen en la parte inferior y centra horizontalmente */
   border-bottom: 1px solid #ccc;
-  /* Agrega una línea de separación */
   padding: 20px;
   max-width: 610px;
-  /* Establece el ancho máximo que deseas */
   background: none;
-  /* Quítale el fondo */
   border-radius: 4px;
-  /* Mantiene los bordes redondeados */
+}
+
+.eliminar-btn{
+  color: #d90000;
+  background: none;
+}
+
+.input-mail-modal-success{
+  border-color: #04ff00;
+}
+
+.eliminar-btn:hover{
+  background-color: #191a19;
 }
 
 .botones-modal {

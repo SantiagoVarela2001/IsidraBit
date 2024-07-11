@@ -71,6 +71,35 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.transaction-details {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.destacado {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.modal-body p {
+  margin-bottom: 0.5em;
+}
+
+.table {
+  margin-top: 1em;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-footer .btn-primary {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
