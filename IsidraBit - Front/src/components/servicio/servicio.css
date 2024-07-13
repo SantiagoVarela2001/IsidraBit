@@ -1,0 +1,38 @@
+.servicio {
+  background-color: rgb(255,255,255, 0.1); /* Color de fondo más suave */
+  color: white;
+  padding: 20px; /* Más espaciado interno */
+  border-radius: 12px; /* Bordes más redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  width: 320px; /* Ancho fijo */
+  height: 250px; /* Alto fijo */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s; /* Transición suave para el efecto de hover */
+}
+
+.servicio:hover {
+  transform: scale(1.05); /* Efecto de agrandamiento al pasar el cursor */
+}
+
+.titulo-servicio {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.descripcion-servicio {
+  font-size: 16px;
+  line-height: 1.5; /* Espacio entre líneas */
+  margin-bottom: 20px;
+}
+
+.contact-button{
+  border-color: rgb(255,255,255, 0.1);
+}
+
+
+

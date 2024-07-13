@@ -95,13 +95,21 @@ body {
   margin-top: 80px;
 }
 
+.contenedor-tarjetas {
+  margin-top: 80px;
+}
+
+.contenedor-tarjetas h2{
+  color: rgb(255, 255, 255);
+}
+
 .titulo {
   color: rgba(255, 255, 255, 0.61);
-  /* Color del texto */
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 4px;
-  margin: 0px;
-  margin-left: 20px;
+  margin: 0;
+  flex: 1;
+  text-align: center;
 }
 
 .contenedor-bolsa {
@@ -164,7 +172,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 20px;
+  margin: 0 auto ;
   /* Añade margen en la parte inferior y centra horizontalmente */
   border-bottom: 1px solid #ccc;
   /* Agrega una línea de separación */
@@ -359,7 +367,8 @@ agregar-quitar-carrito-button {
 
 .mostrar-mas {
   width: 30px;
-  height: 20px;
+  height: 30px;
+  margin-top: 25px;
 }
 
 footer {
@@ -379,8 +388,8 @@ footer {
 }
 
 .imgFooter {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   opacity: 0.7;
 }
 
