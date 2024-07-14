@@ -10,7 +10,7 @@ class ApiBeats {
   }
 
   insertarBeat = async (req) => {
-    const beat = req.body;  // Asumiendo que el cuerpo de la solicitud contiene el beat
+    const beat = req.body;  
     return await this.modelBeats.insertarBeat(beat);
   }
 }

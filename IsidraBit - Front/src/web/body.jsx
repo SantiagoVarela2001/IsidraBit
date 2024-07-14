@@ -1,6 +1,7 @@
 import Banner from '../components/banner/banner';
 import Tarjetas from '../components/tarjetas/tarjetas';
 import Servicios from '../components/servicios/servicios';
+import Sobre_mi from '../components/sobre_mi/sobre_mi';
 
 const Body = ({ incrementarContador, setCarrito, carrito, disminuirContador }) => {
 
@@ -16,6 +17,8 @@ const Body = ({ incrementarContador, setCarrito, carrito, disminuirContador }) =
       disminuirContador={disminuirContador}/>
 
       <Servicios/>
+
+      <Sobre_mi/>
     </div>
   );
 };
