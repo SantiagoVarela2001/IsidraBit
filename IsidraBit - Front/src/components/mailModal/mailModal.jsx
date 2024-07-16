@@ -32,7 +32,7 @@ const MailModal = ({ modalAbierto, setModalAbierto, setMailValidado }) => {
   };
 
   const sendVerificationEmail = async (email, code) => {
-    await axios.post('http://localhost:8080/isidrabit/enviar-correo-verificacion', { email, code });
+    await axios.post('https://isidrabit.onrender.com/isidrabit/enviar-correo-verificacion', { email, code });
   };
 
   const handleSubmit = () => {

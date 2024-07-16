@@ -19,7 +19,7 @@ class Server {
         this.app.use(bodyParser.urlencoded({ extended: true }));
 
         this.app.use(cors({
-            origin: "http://localhost:5173"
+            origin: "https://isidrabit.onrender.com"
         }));
 
         /* ------------------------------------------------------------- */
@@ -34,7 +34,7 @@ class Server {
             await db.conectar();
         }
         const PORT = this.port;
-        this.server = this.app.listen(PORT, () => console.log(`Servidor express escuchando en el puerto http://localhost:${PORT}`));
+        this.server = this.app.listen(PORT, () => console.log(`Servidor express escuchando en el puerto https://isidrabit.onrender.com`));
         this.server.on('error', error => console.log('Servidor express en error:', error));
 
         return this.app;

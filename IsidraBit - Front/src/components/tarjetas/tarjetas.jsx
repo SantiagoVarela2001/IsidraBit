@@ -10,7 +10,7 @@ const [elementosFiltrados, setElementosFiltrados] = useState([]);
 const [mostrarHasta, setMostrarHasta] = useState(4); // Número de tarjetas a mostrar
 
 const fetchData = () => {
-  return axios.get("http://127.0.0.1:8080/Isidrabit/beats")
+  return axios.get("https://isidrabit.onrender.com/Isidrabit/beats")
     .then((response) => setBeats(response.data));
 };
 
