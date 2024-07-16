@@ -1,5 +1,5 @@
 import React from 'react';
-import imagenFondo from '../../assets/imagen_banner.jpg'; // Asegúrate de ajustar la ruta a donde se encuentra tu imagen
+import imagenFondo from '../../assets/imagen_banner.webp'; // Asegúrate de ajustar la ruta a donde se encuentra tu imagen
 import './banner.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Asegúrate de importar Bootstrap
 
