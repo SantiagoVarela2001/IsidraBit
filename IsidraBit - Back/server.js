@@ -19,7 +19,7 @@ class Server {
         this.app.use(bodyParser.urlencoded({ extended: true }));
 
         this.app.use(cors({
-            origin: "https://isidrabit.onrender.com"
+            origin: "https://isidrabit.netlify.app"
         }));
 
         /* ------------------------------------------------------------- */
