@@ -34,7 +34,7 @@ const mostrarMasTarjetas = () => {
     return (
     <div className='contenedor-tarjetas'>
 
-        <h2>BEATS</h2>
+        <h2 className='titulo-tarjetas'>BEATS</h2>
       <input
         className='buscador'
         type="text"

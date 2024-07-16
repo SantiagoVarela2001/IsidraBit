@@ -112,6 +112,7 @@ body {
   text-align: center;
 }
 
+
 .contenedor-bolsa {
   display: flex;
   align-items: center;
@@ -185,19 +186,20 @@ body {
   /* Mantiene los bordes redondeados */
 }
 
-agregar-quitar-carrito-button {
+.agregar-quitar-carrito-button {
   display: inline-block;
-  width: 170px;
-  /* Ancho fijo para ambos botones, ajusta según sea necesario */
+  width: 170px; /* Ancho fijo */
+  height: 45px; /* Altura fija */
   padding: 8px;
-  /* Ajusta según sea necesario */
-  border: none;
+  border: 1px solid white;
   border-radius: 4px;
   font-size: 17px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  /* Efecto de transición al pasar el ratón */
   font-family: 'Kanit', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .agregar-quitar-carrito-button.agregado {
