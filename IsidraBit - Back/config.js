@@ -4,6 +4,7 @@ dotenv.config()
 
 //    SERVIDOR
 const PORT = process.env.PORT || 8080
+const URL_SERVER =process.env.URL_SERVER
 const MODO_PERSISTENCIA = process.env.MODO_PERSISTENCIA || 'MONGODB'  
 const STRCNX = process.env.STRCNX || 'mongodb://127.0.0.1'
 const BASE = process.env.BASE || 'test'
@@ -22,6 +23,7 @@ export default {
     STRCNX,
     BASE,
     URL,
+    URL_SERVER,
     EMAIL_SERVICE,
     EMAIL_HOST,
     EMAIL_PORT,

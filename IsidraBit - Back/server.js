@@ -20,7 +20,7 @@ class Server {
 
         // Configuración de CORS
         this.app.use(cors({
-            origin: "https://isidrabit.netlify.app",
+            origin: config.URL_SERVER,
             methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
             preflightContinue: false,
             optionsSuccessStatus: 204

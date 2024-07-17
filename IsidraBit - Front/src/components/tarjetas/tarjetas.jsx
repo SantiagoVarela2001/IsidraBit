@@ -9,9 +9,12 @@ const [busqueda, setBusqueda] = useState('');
 const [elementosFiltrados, setElementosFiltrados] = useState([]);
 const [mostrarHasta, setMostrarHasta] = useState(4); // Número de tarjetas a mostrar
 
+const apiBaseURL = import.meta.env.VITE_URL_SERVER;
+
 const fetchData = () => {
-  return axios.get("https://isidrabit.onrender.com/Isidrabit/beats")
-    .then((response) => setBeats(response.data));
+  return axios.get(`${apiBaseURL}/Isidrabit/beats`)
+    .then((response) => setBeats(response.data))
+    .catch((error) => console.error('Error fetching data:', error));
 };
 
 useEffect(() => {
@@ -19,7 +22,6 @@ useEffect(() => {
 }, []);
 
 useEffect(() => {
-  // Filtrar elementos por nombre cuando cambia la búsqueda
   const resultadosFiltrados = beats.filter(elemento =>
     elemento.nombre.toLowerCase().includes(busqueda.toLowerCase())
   );

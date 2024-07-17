@@ -14,13 +14,6 @@
   filter: brightness(0.8);
 }
 
-@media (max-width: 768px) {
-  .banner-image img {
-    width: 100%;
-    object-position: top;
-  }
-}
-
 .banner-description {
   padding: 20px;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
@@ -42,5 +35,9 @@
 
   .banner-description h2 {
     font-size: 1.8em;
+  }
+  .banner-image img {
+    width: 100%;
+    object-position: top;
   }
 }

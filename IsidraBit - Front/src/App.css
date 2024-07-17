@@ -97,6 +97,8 @@ body {
 
 .contenedor-tarjetas {
   margin-top: 80px;
+  max-width: 100%; /* Ancho máximo del contenedor */
+  overflow-x: auto; /* Habilita el scroll horizontal si es necesario */
 }
 
 .contenedor-tarjetas h2{
@@ -174,16 +176,11 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto ;
-  /* Añade margen en la parte inferior y centra horizontalmente */
   border-bottom: 1px solid #ccc;
-  /* Agrega una línea de separación */
   padding: 20px;
   max-width: 610px;
-  /* Establece el ancho máximo que deseas */
   background: none;
-  /* Quítale el fondo */
   border-radius: 4px;
-  /* Mantiene los bordes redondeados */
 }
 
 .agregar-quitar-carrito-button {
@@ -407,4 +404,26 @@ footer {
 footer {
   bottom: 0;
   width: 100%;
+}
+
+@media (max-width: 769px) { /* Pantallas menores o iguales a 576px */
+  .tarjeta {
+    display: inline-block; /* Cambiar a display block en pantallas pequeñas */
+  }
+  .contenedor-tarjetas{
+    margin-top: 0px;
+  }
+  .informacion{
+    display: inline;
+    margin-left: 0px;
+  }
+  .agregar-quitar-carrito-button{
+    display: inline;
+  }
+  .contenedor-footer {
+    gap: 100px;
+  }
+  .contenedor-body {
+    margin-top: 0px;
+  }
 }

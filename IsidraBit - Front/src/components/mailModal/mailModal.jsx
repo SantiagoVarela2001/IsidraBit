@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import { Modal, Button, Form, Alert } from 'react-bootstrap';
 import axios from "axios";
 
+
 const MailModal = ({ modalAbierto, setModalAbierto, setMailValidado }) => {
   const [userEnteredCode, setUserEnteredCode] = useState('');
   const [userEnteredMail, setUserEnteredMail] = useState('');
   const [codigoVerificacion, setCodigoVerificacion] = useState('');
   const [validacionExitosa, setValidacionExitosa] = useState(false);
   const [envioCorreoExitoso, setEnvioCorreoExitoso] = useState(false); // Nuevo estado para indicar envío exitoso
+
+  const apiBaseURL = import.meta.env.VITE_URL_SERVER;
 
   const handleClose = () => {
     setModalAbierto(false);
@@ -32,7 +35,7 @@ const MailModal = ({ modalAbierto, setModalAbierto, setMailValidado }) => {
   };
 
   const sendVerificationEmail = async (email, code) => {
-    await axios.post('https://isidrabit.onrender.com/isidrabit/enviar-correo-verificacion', { email, code });
+    await axios.post(`${apiBaseURL}/enviar-correo-verificacion`, { email, code });
   };
 
   const handleSubmit = () => {
