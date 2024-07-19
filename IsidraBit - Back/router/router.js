@@ -2,6 +2,7 @@ import express from 'express'
 import ControladorBeats from '../controlador/beats.js'
 import enviarCorreoVerificacion from '../controlador/correoVerificacionController.js';
 import bodyParser from 'body-parser';
+import authenticate from '../middelwares/authenticate.js';
 
 class Router {
   constructor(persistencia) {
@@ -13,7 +14,8 @@ class Router {
     this.router.use(bodyParser.json());
     this.router.use(bodyParser.urlencoded({ extended: true }));
     this.router.get('/beats', this.controladorBeats.obtenerBeats)
-    this.router.post('/beat', this.controladorBeats.insertarBeat)
+    
+    this.router.post('/beat', authenticate, this.controladorBeats.insertarBeat);
 
     this.router.post('/enviar-correo-verificacion', enviarCorreoVerificacion);
 

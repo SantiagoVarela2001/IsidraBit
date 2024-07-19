@@ -17,6 +17,9 @@ const EMAIL_PORT = process.env.EMAIL_PORT
 const EMAIL_USER = process.env.EMAIL_USER
 const EMAIL_PASS = process.env.EMAIL_PASS
 
+// AUTENTICACION
+const TOKEN = process.env.TOKEN
+
 export default {
     PORT,
     MODO_PERSISTENCIA,
@@ -29,4 +32,5 @@ export default {
     EMAIL_PORT,
     EMAIL_USER,
     EMAIL_PASS,
+    TOKEN
 }

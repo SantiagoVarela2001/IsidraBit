@@ -35,7 +35,7 @@ const MailModal = ({ modalAbierto, setModalAbierto, setMailValidado }) => {
   };
 
   const sendVerificationEmail = async (email, code) => {
-    await axios.post(`${apiBaseURL}/enviar-correo-verificacion`, { email, code });
+    await axios.post(`${apiBaseURL}/isidrabit/enviar-correo-verificacion`, { email, code });
   };
 
   const handleSubmit = () => {

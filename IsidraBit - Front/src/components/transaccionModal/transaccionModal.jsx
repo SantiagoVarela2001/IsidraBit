@@ -3,7 +3,12 @@ import { Modal, Button, Table } from 'react-bootstrap';
 
 const TransaccionModal = ({ modalAbierto, cerrarModal, carrito, resetCarrito, setCompraRealizada }) => {
     const precio = import.meta.env.VITE_PRECIO;
-    const transactionNumber = 702299; // Número de transacción generado aleatoriamente
+
+    const generateTransactionNumber = () => {
+        return Math.floor(100000 + Math.random() * 900000);
+    };
+
+    const transactionNumber = generateTransactionNumber();
 
     const handleCancelar = () => {
         setCompraRealizada(false);

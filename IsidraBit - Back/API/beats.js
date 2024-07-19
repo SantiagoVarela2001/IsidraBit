@@ -9,8 +9,7 @@ class ApiBeats {
     return await this.modelBeats.obtenerBeats();
   }
 
-  insertarBeat = async (req) => {
-    const beat = req.body;  
+  insertarBeat = async (beat) => {
     return await this.modelBeats.insertarBeat(beat);
   }
 }

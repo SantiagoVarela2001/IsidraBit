@@ -36,14 +36,14 @@ class ModelMongoDB {
     }
 
     insertarBeat = async beat => {
+        console.log(beat);
         try{
             if(!CnxMongoDB.connectOk) return {}
             await CnxMongoDB.db.collection('beats').insertOne(beat)
-            console.log("model ---> ", beat)
             return beat
         }
         catch(error) {
-            console.log('error en guardarReserva:', error)
+            console.log('error el agregar el beat:', error)
             return {}
         }  
     }

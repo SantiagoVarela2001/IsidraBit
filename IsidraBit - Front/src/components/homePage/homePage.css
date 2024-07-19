@@ -1,0 +1,429 @@
+.hueso {
+    color: #dee7e2;
+  }
+  
+  .gris1 {
+    color: #bfc8c4;
+  }
+  
+  .gris2 {
+    color: #a1a9a5;
+  }
+  
+  .gris3 {
+    color: #828b87;
+  }
+  
+  .grisOscuro {
+    color: #646c68;
+  }
+  
+  #root {
+    max-width: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+  
+  @keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear;
+    }
+  }
+  
+  .card {
+    padding: 2em;
+  }
+  
+  .read-the-docs {
+    color: #888;
+  }
+  
+  
+  /* Estilo del encabezado */
+  header {
+    position: fixed;
+    top: 0;
+    /* Coloca el encabezado en la parte superior */
+    left: 0;
+    /* Alinea el encabezado a la izquierda */
+    display: flex;
+    background-color: black;
+    padding: 10px;
+    /* Espaciado interno para el contenido del encabezado */
+    text-align: left;
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    z-index: 1000;
+  }
+  
+  body {
+    padding: 2rem;
+    margin-top: 100px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    min-height: 100vh;
+  }
+  
+  .contenedor-body {
+    margin-top: 80px;
+  }
+  
+  .contenedor-tarjetas {
+    margin-top: 80px;
+    max-width: 100%; /* Ancho máximo del contenedor */
+    overflow-x: auto; /* Habilita el scroll horizontal si es necesario */
+  }
+  
+  .contenedor-tarjetas h2{
+    color: rgb(255, 255, 255);
+  }
+  
+  .titulo {
+    color: rgba(255, 255, 255, 0.61);
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 4px;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+  }
+  
+  
+  .contenedor-bolsa {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  
+  .contenedor-bolsa:hover {
+    opacity: 1;
+  }
+  
+  .bolsaComprasImg {
+    display: block;
+    width: 40px;
+    height: 35px;
+    margin-right: 0px;
+    /* Puedes ajustar esto según tus necesidades */
+  }
+  
+  .contador {
+    font-family: 'Bebas Neue', sans-serif;
+    color: whitesmoke;
+    margin-left: -22.5px;
+    margin-top: 18px;
+    font-size: 15px;
+  }
+  
+  
+  .buscador {
+    width: 50%;
+    /* Ocupa la mitad de la pantalla */
+    padding: 10px;
+    /* Añade espacio interno alrededor del input */
+    font-size: 16px;
+    /* Tamaño del texto */
+    border: 1px solid #ccc;
+    /* Borde del input */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    margin: 20px auto;
+    /* Centra el input horizontalmente y agrega un espacio superior */
+    display: block;
+    /* Hace que el input sea un bloque para ajustar el ancho */
+    margin-bottom: 50px;
+    background-color: black;
+  }
+  
+  .buscador::placeholder {
+    color: #888;
+    /* Color del texto de marcador de posición */
+  }
+  
+  .tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto ;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    max-width: 610px;
+    background: none;
+    border-radius: 4px;
+  }
+  
+  .agregar-quitar-carrito-button {
+    display: inline-block;
+    width: 170px; /* Ancho fijo */
+    height: 45px; /* Altura fija */
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Kanit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .agregar-quitar-carrito-button.agregado {
+    background-color: #f44336; /* Color cuando está agregado */
+    color: white;
+  }
+  
+  /* Estilos generales para el modal de correo electrónico */
+  .modal-mail {
+    text-align: center;
+  }
+  
+  /* Estilos para el formulario del modal */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .input-mail-modal {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos para el botón del modal */
+  .mail-boton {
+    width: 170px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0, 0.8);
+    transition: background-color 0.3s ease;
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .mail-boton:hover {
+    background-color: rgb(0, 0, 0, 1);
+  }
+  
+  .nombre-beat {
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 3px;
+    padding-top: 0px;
+    letter-spacing: 2px;
+    font-size: 40px;
+  }
+  
+  .genero,
+  .bpm {
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  .informacion {
+    margin-left: 70px;
+    color: #dee7e2;
+  }
+  
+  .modalcarrito {
+    color: whitesmoke;
+    left: 50%;
+    top: 50%;
+    padding: 20px;
+    z-index: 2000;
+  }
+  
+  .beatsEnCarrito {
+    margin-top: 50px;
+  }
+  
+  .beatCarrito {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    max-width: 610px;
+    background: none;
+    border-radius: 4px;
+  }
+  
+  .eliminar-btn{
+    color: #d90000;
+    background: none;
+  }
+  
+  .input-mail-modal-success{
+    border-color: #04ff00;
+  }
+  
+  .eliminar-btn:hover{
+    background-color: #191a19;
+  }
+  
+  .botones-modal {
+    margin-top: 70px;
+  }
+  
+  .boton-cerrar-modal,
+  .boton-comprar-modal {
+    display: inline-block;
+    width: 120px;
+    /* Ancho fijo para ambos botones, ajusta según sea necesario */
+    padding: 8px;
+    /* Ajusta según sea necesario */
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Efecto de transición al pasar el ratón */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .boton-cerrar-modal {
+    background-color: #ff4136;
+    /* Rojo */
+    color: white;
+  }
+  
+  .boton-cerrar-modal:hover {
+    background-color: #d90000;
+    /* Rojo más oscuro al pasar el ratón */
+  }
+  
+  .boton-comprar-modal {
+    background-color: #aeeeff;
+    /* Azul clarito */
+    color: #191a19;
+    /* Color de texto oscuro para destacar */
+  }
+  
+  .boton-comprar-modal:hover {
+    background-color: #8ad4ff;
+    /* Azul más oscuro al pasar el ratón */
+  }
+  
+  .precio {
+    color: rgba(255, 255, 255, 0.61);
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 4px;
+    margin-top: 70px;
+  }
+  
+  .boton-mostrar-mas {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .boton-mostrar-mas:hover{
+    background-color: transparent;
+  }
+  
+  .mostrar-mas {
+    width: 30px;
+    height: 30px;
+    margin-top: 25px;
+  }
+  
+  footer {
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contenedor-footer {
+    display: flex;
+    gap: 180px;
+  }
+  
+  .imgFooter {
+    width: 25px;
+    height: 25px;
+    opacity: 0.7;
+  }
+  
+  .imgFooter:hover {
+    opacity: 1;
+  }
+  
+  .contenedor-body {
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  footer {
+    bottom: 0;
+    width: 100%;
+  }
+  
+  @media (max-width: 769px) { /* Pantallas menores o iguales a 576px */
+    .tarjeta {
+      display: inline-block; /* Cambiar a display block en pantallas pequeñas */
+    }
+    .contenedor-tarjetas{
+      margin-top: 0px;
+    }
+    .informacion{
+      display: inline;
+      margin-left: 0px;
+    }
+    .agregar-quitar-carrito-button{
+      display: inline;
+    }
+    .contenedor-footer {
+      gap: 100px;
+    }
+    .contenedor-body {
+      margin-top: 0px;
+    }
+  }

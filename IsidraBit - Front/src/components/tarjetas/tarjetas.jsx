@@ -11,10 +11,13 @@ const [mostrarHasta, setMostrarHasta] = useState(4); // Número de tarjetas a mo
 
 const apiBaseURL = import.meta.env.VITE_URL_SERVER;
 
-const fetchData = () => {
-  return axios.get(`${apiBaseURL}/Isidrabit/beats`)
-    .then((response) => setBeats(response.data))
-    .catch((error) => console.error('Error fetching data:', error));
+const fetchData = async () => {
+  try {
+    const response = await axios.get(`${apiBaseURL}/Isidrabit/beats`);
+    return setBeats(response.data);
+  } catch (error) {
+    return console.error('Error fetching data:', error);
+  }
 };
 
 useEffect(() => {
